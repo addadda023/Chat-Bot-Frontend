@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Chat with GPT2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<style>
+    html,
+    body {
+        height: 95% !important;
+        margin: 0 !important;
+    }
+
+    footer {
+        /*max-height: 5% !important;*/
+        padding: 1em !important
+    }
+
+    section {
+        min-height: 95% !important
+    }
+
+    .gen-box {
+        background-color: #fff;
+        display: block;
+        padding: 1.25rem;
+        color: #4a4a4a;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.25;
+    }
+
+    .gen-border {
+        height: 0.25em;
+        background-color: #d5d5d5;
+    }
+
+    .gen-box.warning {
+        color: red;
+        font-weight: 700;
+    }
+
+    .brand-text {
+        display: flex;
+        align-items: center;
+        font-size: 1.5em
+    }
+
+    #extra-buttons {
+        padding-top: 1em;
+        margin-top: 1em;
+        border-top: 0.5px solid #d5d5d5;
+    }
+
+    @use postcss-nested;
+    .container {
+        font-family: "Helvetica Neue";
+        font-size: 20px;
+        font-weight: normal;
+        max-width: 550px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        max-width: 300px;
+        word-wrap: break-word;
+        margin-bottom: 12px;
+        line-height: 24px;
+        position: relative;
+        padding: 10px 20px;
+        border-radius: 25px;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            height: 20px;
+        }
+    }
+
+    .from-me {
+        color: white;
+        background: #0B93F6;
+        align-self: flex-end;
+        &:before {
+            right: -7px;
+            border-right: 20px solid #0B93F6;
+            border-bottom-left-radius: 16px 14px;
+            transform: translate(0, -2px);
+        }
+        &:after {
+            right: -56px;
+            width: 26px;
+            background: white;
+            border-bottom-left-radius: 10px;
+            transform: translate(-30px, -2px);
+        }
+    }
+
+    .from-them {
+        background: #E5E5EA;
+        color: black;
+        &:before {
+            left: -7px;
+            border-left: 20px solid #E5E5EA;
+            border-bottom-right-radius: 16px 14px;
+            transform: translate(0, -2px);
+        }
+        &:after {
+            left: 4px;
+            width: 26px;
+            background: white;
+            border-bottom-right-radius: 10px;
+            transform: translate(-30px, -2px);
+        }
+    }
+</style>
+
+<!-- Navigation -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <span class="icon is-large">
+      <span class="fa-stack">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-robot fa-stack-1x fa-inverse"></i>
+      </span>
+        </span>
+        <div class="brand-text is-family-code is-uppercase has-text-weight-bold">Chat with GPT-2</div>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu is-active">
+        <div class="navbar-start">
+
+            <div class="navbar-item">
+
+            </div>
+
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item is-hidden-touch">
+                <div class="buttons">
+                    <a class="button is-light" href="https://github.com/addadda023/Chat-Bot-Frontend" target="_blank">
+                        <span class="icon">
+              <i class="fab fa-lg fa-github"></i>
+            </span><span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<body>
+    <section id="main" class="section">
+        <div class="container">
+
+            <p class="from-me">Hey there! What's up</p>
+            <p class="from-them">Checking out iOS7 you know..</p>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+
+            Original GPT-2 model by <a href="https://openai.com" target="_blank">OpenAI</a>. This website content is licensed <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
